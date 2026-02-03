@@ -108,17 +108,9 @@
         They allow shorter syntax for function expressions. You can skip the function keyword, the return keyword and the curly bracelets.
 
         They are always written as a function expression.
-        So they should be declaredd before usage
-
-
-
-
+        So they should be declaredd before usage  
         
-        
-        
-        
-        
-        */
+                */
        const add=(a,b)=> a*b;
        let say=()=> "hello world";
        //before arrow
@@ -143,6 +135,137 @@
 
         // This will return the expected result
         const myFunction = (x, y) => { return x * y };
+
+
+        //OBJECTS
+
+        /*
+You should declare objects with const objects.
+After declaring you can add properties.
+
+What are JavaScript Objects?
+Objects are variables that can store both values and functions.
+
+Values are stored as key:value pairs called properties.
+
+Functions are stored as key:function() pairs called methods.
+
+"this" refers to the object. ,t is used to access the object that is calling a method.
+        */
+
+        const car={
+            type:"fiat";
+            model:"500";
+
+            total: function() {
+                return this.type+this.model
+            };
+        }
+        //type and model are properties. "this" refers to car object
+
+//to invoke an object method
+        car.total() //calls the method. it will execute as a function
+        //adding a method.
+
+        car.newmeth=function(a,b){
+            return a+b;
+        }
+
+
+
+
+        const person1={
+            name:"sude";
+            surname:"aslan"
+            hello: function(){
+                return "hii "+this.name;
+            }
+        }
+        const person2={
+            name:"ibos";
+            surname:"rayamah";
+            hello: function(){
+                return "hii "+this.name;
+        }
+
+        let himessage=person2.hello();
+
+        //how to display object properties
+
+        //with loop
+        text=""
+        for (let x in person){
+            text+=person[x]+ " "
+        }
+
+        //with object.values(). it creates an array from the property values.
+
+        const myarray=Object.values(person);
+
+        //with object.entries. it makes it simple to use objects in loops.
+        const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+        let text = "";
+        for (let [fruit, value] of Object.entries(fruits)) {
+        text += fruit + ": " + value + "<br>";
+        }
+
+
+        /*
+        using json.stringfy()
+
+        JSON == json object notation. transforms data into format that can be readable by humans.
+        it is a text format.
+        when you are using it with python, you dump it to json
+        json_string=json.dumps(data). when each language can understand json.
+
+        # converting to a python object
+python_obj = json.loads(json_string)
+print(python_obj)
+*/
+        
+        // Create an Object
+        const person = {
+        name: "John",
+        age: 30,
+        city: "New York"
+        };
+
+        // Stringify Object
+        let text = JSON.stringify(person);
+
+        //OBJECT CONSTRUCTORS. to create many objects of the same type.
+        function person(name,surname){
+            this.name=name;
+            this.surname=surname;
+
+            //property default values
+            this.nationality="english";
+        }
+/* js de önceden prototip vardı haberin olsun karşına çıkarsa falan.
+*/
+
+        //CLASS
+        //--------------------------
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {. //you dont need to write function here as in python.
+                console.log(`Hi, I'm ${this.name}`);
+            }
+        }
+
+        const p = new Person("Sude", 21);
+        p.greet(); // Hi, I'm Sude
+
+        p.name
+        p["name"]
+
+        
+
 
        
 
