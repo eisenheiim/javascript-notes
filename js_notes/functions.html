@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        
+    </head>
+    <body>
+
+        <p>rock paper scissors game</p>
+        <button onclick="
+            pickcompmove();
+
+            let result=''
+
+            if (computermove==='rock'){
+
+                result='win';
+            }
+            else{
+                result='loss';
+            }
+
+            alert(`result is ${result}`);
+            ">scissors</button> 
+        
+
+        
+
+        <script>
+
+            let computermove="";
+            function pickcompmove(){
+                const randomnum=Math.random();
+                
+
+                if (randomnum>=0 && randomnum<1/3){
+                    computermove="rock";
+                }
+                else{
+                    computermove="scissors";
+                }
+
+                    }
+
+        //ARGUMENTS= real values passed to the function
+        function multiply(a,b){
+            return a*b;
+        }
+        multiply(3,4)
+
+        //here a and b are parameters while 3 and 4 are arguments
+
+        //arguments object. contains array of the arguments used when the function was called
+        
+
+        x=findmax(1,2,3,4)
+
+        function findmax(){
+            let max=-Infinity;
+            for(let i=0;i<arguments.length;i++){
+                if(arguments[i]>max){
+                    max=arguments[i];
+                }
+            }
+
+            return max;
+        }
+        //If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.
+
+        //default parameters
+        function defprm(x,y=5){
+            return x+y
+        }
+
+        //FUNCTION EXPRESSIONS: a function stored in a variable. they are commonly used to create anonymous functions. but you can also name it.
+        //the variable name is used to call the function.
+        //function expressions are java script statements
+
+
+        const multiply= function(a,b) {return a*b};
+        let z= multiply(3,5)
+            
+
+        function run(fn){
+            return fn();
+
+        }
+
+        const sayhello=function(){
+            return "heloo";
+        };
+
+        //the function is stored in the variable sayhello. to run it, you need call it by sayhello()
+
+        run(sayhello)
+
+        //function declarations are "hoisted" to the top of their scope. so that you can call it before it is defined in the code.
+
+        x=sum(3,4)
+        function sum(a,b){
+            return a+b
+        }
+
+        //but function expressions are not hoisted
+
+
+        /*ARROW FUNCTIONS. 
+        They allow shorter syntax for function expressions. You can skip the function keyword, the return keyword and the curly bracelets.
+
+        They are always written as a function expression.
+        So they should be declaredd before usage
+
+
+
+
+        
+        
+        
+        
+        
+        */
+       const add=(a,b)=> a*b;
+       let say=()=> "hello world";
+       //before arrow
+       say=function(){return "hello world";
+       };
+
+       //if you have only one parameter, you can omit paranthesis.
+
+       const square= x => x**2;
+       const greet= (name) => "hwllo "+name;
+
+       //but if no parameters, paranthesis require
+
+       const noparam= () => "hii";
+
+       // You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:
+        //This will return undefined
+        const myFunction = (x, y) => { x * y };
+
+        // This wull return undefined
+        const myFunction = (x, y) => return x * y;
+
+        // This will return the expected result
+        const myFunction = (x, y) => { return x * y };
+
+       
+
+        </script>
+
+
+    </body>
+</html>

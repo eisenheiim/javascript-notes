@@ -1,0 +1,19 @@
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator
+
+
+Parameters vs. Arguments
+In JavaScript, function parameters and arguments are distinct concepts:
+
+Parameters are the names listed in the function definition.
+
+Arguments are the real values passed to, and received by the function.
+
+When to Use Each
+Use function declarations for general-purpose functions
+Use function expressions when assigning functions to variables
+Use function expressions in callbacks and event handlers

@@ -1,0 +1,114 @@
+
+/*comment */
+#dropdownbutton{
+  position: relative;
+  top: 20px;
+  left: 30px;
+   
+}
+body{
+    background-color: rgb(185, 124, 203);
+    opacity:0.7;
+   
+    
+    background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20240919/pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg")
+    
+}
+#welcome {
+    background-color: rgb(53, 116, 180);
+
+    margin-left:50%;
+    margin-top:50px; 
+
+    border-style:dashed double dotted solid;
+    border-width:10px;
+    border-color:purple  blue black white;
+    border-radius:10px;
+
+    padding: 40px 10px 20px 10px;
+} 
+
+p{
+    margin: 100px;
+    color:blue;
+    border: 10px dashed purple;
+  
+    
+}
+
+#div2{
+    outline-style:solid;
+    margin-left:50%;
+    width:70px;
+}
+
+.heading{
+    text-align:right;
+    text-decoration-line:overline;
+    text-decoration-style: dashed;
+    text-decoration-color: blue;
+
+    text-transform:lowercase;
+
+    letter-spacing:20px;
+
+    font-family:"Lucida Console",   "Courier New", monospace;
+    font-style:italic;
+    font-size:50px;
+
+}
+table,th,td{
+    border: 2px solid;
+    width: 50%;
+    border-collapse:collapse;
+}
+
+th,td{
+    height: 50px;
+    padding:10px;
+}
+tr:hover{
+    background-color:blue;
+}
+h1 b{
+    color:red
+}
+
+.dropdownbutton{
+    background-color:blue;
+    color:white;
+    padding:13px;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+}
+.dropdown-menu{
+display:none;
+    position:absolute;
+    background-color: lightblue;
+    min-width:150px;
+}
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+.dropdown-menu a{
+    color:black;
+    padding:11px 15px;
+    text-decoration:none;
+    display:block;
+}
+.dropdown-menu a:hover{
+    background-color: white; 
+}
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+.dropdown:hover .dropdownbutton{
+    background-color: gray ;
+}
+
+div[class]{
+    color:aquamarine
+}
