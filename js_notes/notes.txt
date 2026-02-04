@@ -17,3 +17,20 @@ When to Use Each
 Use function declarations for general-purpose functions
 Use function expressions when assigning functions to variables
 Use function expressions in callbacks and event handlers
+
+
+JavaScript animations are done by programming gradual changes in an element's style.
+
+The changes are called by a timer. When the timer interval is small, the animation looks continuous.
+
+The basic code is:
+
+Example
+id = setInterval(frame, 5);
+
+function frame() {
+  if (/* test for finished */) {
+    clearInterval(id);
+  } else {
+    /* code to change the element style */ 
+  }

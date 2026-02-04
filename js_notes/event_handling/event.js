@@ -165,3 +165,32 @@ function showMsg() {
 }
 
 
+
+
+//The SetInterval()Method .The setInterval() method calls a function repeatedly.
+
+//setInterval(function, delay, p1,...,pN)
+
+const startb=document.getElementById("start")
+const stopb=document.getElementById("stop")
+
+
+let counter=document.getElementById("counter")
+let count=0;
+startb.addEventListener("click",function(){
+    
+    myinterval=setInterval(timer,1000);
+    counter.innerHTML=count;
+})
+stopb.addEventListener("click",function(){
+    clearInterval(myinterval);
+})
+    
+
+function timer(){
+    count++;
+    counter.innerHTML=count;
+
+}
+
+
