@@ -1,0 +1,21 @@
+
+
+body{
+    min-height:500px;
+    border:8px solid black;
+    display:flex;
+    gap:20px}
+
+.box{
+    height:100px;
+    width:190px;
+    background-color:aqua;
+    font-size:40pt;
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+
+
+}

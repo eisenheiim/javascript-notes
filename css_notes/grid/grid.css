@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: 150px 200px 150px 200px; */
+    /* grid-template-columns: 150px auto auto; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: auto 25% 50%; */
+    /* grid-template-columns: repeat(4, auto); */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
+
+    /* grid-template-rows: 200px 300px; */
+    /* grid-template-rows: 1fr 3fr; */
+    /* grid-auto-rows: 2fr;  yani 1 ve 3 fr den sonrakiler auto */
+
+    background-color: brown;
+    padding: 20px;
+    gap: 10px;
+    /* column-gap: 10px; */
+    /* row-gap: 10px; */
+}
+
+.item {
+    background-color: goldenrod;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.item:first-child {
+    /* grid-row-start: 1;
+    grid-row-end: 4; */
+    /* grid-row: 1 / 4; */
+    /* grid-row: 1 / span 3; */
+
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column: 1 / 5; */
+    /* grid-column: 1 / span 3; */
+
+    grid-area: 1 / 1 / span 3 / span 3;
+}
+
+.container2{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 80px;
+     
+}
+
+header,footer,main,aside,nav{
+    background-color:blue;
+    color:white;
+    padding:15px;
+    border:1px solid sandybrown;
+
+}
+
+header{
+    grid-column: 1 / span 3 ;
+}
+
+footer{
+    grid-column: 1 / span 3;
+}
